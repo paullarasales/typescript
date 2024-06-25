@@ -1,0 +1,2 @@
+let names: string[]
+export {}
