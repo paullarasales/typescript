@@ -1,3 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let names;
+const TodoService_1 = require("./services/TodoService");
+console.log("Adding Todos:");
+const todo1 = TodoService_1.todoService.addTodo("Learn TypeScript");
+const todo2 = TodoService_1.todoService.addTodo("Build a Todo App");
+console.log(TodoService_1.todoService.getTodos());
+console.log("\nMarking the first todo as completed:");
+TodoService_1.todoService.markAsCompleted(todo1.id);
+console.log(TodoService_1.todoService.getTodos());
+console.log("\nRemoving the second todo:");
+TodoService_1.todoService.removeTodo(todo2.id);
+console.log(TodoService_1.todoService.getTodos());
